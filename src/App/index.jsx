@@ -1,11 +1,15 @@
 import React from 'react';
 import withConnect from './withConnect';
+import Sidebar from './Sidebar/index.jsx';
 
 const App = ({ setPage }) => {
   console.log('setPage', setPage);
   setPage('home');
   return (
-    <h1>Hello, world!</h1>
+    <div>
+      <Sidebar />
+      <h1>Hello, world!</h1>
+    </div>
   );
 };
 
