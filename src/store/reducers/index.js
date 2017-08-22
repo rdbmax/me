@@ -7,7 +7,8 @@ import url from './url';
 const history = createHistory();
 
 const routesMap = {
-  HOME: '/home',
+  HOME: '/',
+  EDUCATION: '/education',
 };
 
 const {
