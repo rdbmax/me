@@ -5,5 +5,5 @@
 [x] RESELECT
 [] PROD
 [] POSTCSS
-[] GITHUB PAGES
-[] CI
+[x] GITHUB PAGES
+[x] CI
