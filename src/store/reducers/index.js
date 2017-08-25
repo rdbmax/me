@@ -19,11 +19,12 @@ const {
 
 const middlewares = applyMiddleware(locationMiddleware);
 
+const composed = [enhancer, middlewares];
+
+if (window.__REDUX_DEVTOOLS_EXTENSION__)
+  composed.push(window.__REDUX_DEVTOOLS_EXTENSION__());
+
 export default createStore(
   combineReducers({ url, location }),
-  compose(
-    enhancer,
-    middlewares,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-  ),
+  compose(...composed),
 );
