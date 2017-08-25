@@ -4,8 +4,8 @@ import withConnect from './withConnect';
 
 const Sidebar = () => (
   <ul>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/education">Education</Link></li>
+    <li><Link to="/">Home</Link></li>
+    <li><Link to="/education">Education</Link></li>
   </ul>
 );
 

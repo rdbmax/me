@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
-import { getCurrentPage } from '../../store/selectors/url';
+import { getPageType } from '../../store/selectors';
 
 const mapStateToProps = state => ({
-  currentPage: getCurrentPage(state),
+  page: getPageType(state),
 });
 
 export default connect(mapStateToProps);

@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
-import { setPage } from '../store/actions';
+import { getPageType } from '../store/selectors';
 
-const mapDispatchToProps = { setPage };
+const mapStateToProps = state => ({
+  page: getPageType(state),
+});
 
-export default connect(null, mapDispatchToProps);
+export default connect(mapStateToProps);

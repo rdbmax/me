@@ -20,6 +20,8 @@
   "homepage": "https://github.com/rdbmax/me#readme",
   "dependencies": {
     "history": "^4.6.3",
+    "jsx-control-statements": "^3.2.6",
+    "prop-types": "^15.5.10",
     "react": "next",
     "react-dom": "next",
     "react-redux": "^5.0.6",
