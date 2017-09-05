@@ -1,8 +1,11 @@
 /* eslint-disable no-underscore-dangle */
 import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
+import createSagaMiddleware from 'redux-saga';
 import { connectRoutes } from 'redux-first-router';
 import createHistory from 'history/createBrowserHistory';
 import url from './url';
+import user from './user';
+import linkedinSaga from '../sagas/linkedinSaga';
 
 const history = createHistory();
 
@@ -17,14 +20,19 @@ const {
   enhancer,
 } = connectRoutes(history, routesMap);
 
-const middlewares = applyMiddleware(locationMiddleware);
+const sagaMiddleware = createSagaMiddleware();
+
+const middlewares = applyMiddleware(locationMiddleware, sagaMiddleware);
 
 const composed = [enhancer, middlewares];
 
-if (window.__REDUX_DEVTOOLS_EXTENSION__)
+if (window.__REDUX_DEVTOOLS_EXTENSION__) {
   composed.push(window.__REDUX_DEVTOOLS_EXTENSION__());
+}
 
 export default createStore(
-  combineReducers({ url, location }),
+  combineReducers({ url, user, location }),
   compose(...composed),
 );
+
+sagaMiddleware.run(linkedinSaga);

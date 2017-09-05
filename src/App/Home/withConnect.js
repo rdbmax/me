@@ -1,8 +1,14 @@
 import { connect } from 'react-redux';
-import { getPageType } from '../../store/selectors';
+import { getIsUserLoggedIn } from '../../store/selectors';
+import { connectRequest, logoutRequest } from '../../store/actions';
 
 const mapStateToProps = state => ({
-  page: getPageType(state),
+  isUserLoggedIn: getIsUserLoggedIn(state),
 });
 
-export default connect(mapStateToProps);
+const mapDispatchToProps = {
+  connectRequest,
+  logoutRequest,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps);
