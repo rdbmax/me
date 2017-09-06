@@ -1,6 +1,6 @@
 import { put, takeLatest } from 'redux-saga/effects';
-import login from '../../api/login';
-import logout from '../../api/logout';
+import login from 'api/login';
+import logout from 'api/logout';
 import {
   LOGOUT_REQUESTED,
   CONNECT_REQUESTED,
