@@ -3,11 +3,12 @@ import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import { connectRoutes } from 'redux-first-router';
 import createHistory from 'history/createBrowserHistory';
+import { baseUrl } from 'config';
 import url from './url';
 import user from './user';
 import linkedinSaga from '../sagas/linkedinSaga';
 
-const history = createHistory();
+const history = createHistory({ basename: baseUrl });
 
 const routesMap = {
   HOME: '/',

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "build": "./node_modules/.bin/webpack --config webpack.prod.config.js",
-    "dev": "webpack-dev-server --open --config webpack.dev.config.js"
+    "dev": "webpack-dev-server --open-page me --config webpack.dev.config.js"
   },
   "repository": {
     "type": "git",
