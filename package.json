@@ -6,7 +6,9 @@
   "scripts": {
     "test": "jest",
     "build": "./node_modules/.bin/webpack --config webpack.prod.config.js",
-    "dev": "webpack-dev-server --open-page me --config webpack.dev.config.js"
+    "dev": "webpack-dev-server --open-page me --config webpack.dev.config.js",
+    "docker:build": "docker build -t me .",
+    "docker:run": "docker run -p 80:80 me:latest"
   },
   "repository": {
     "type": "git",
