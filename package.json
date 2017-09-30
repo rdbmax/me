@@ -23,9 +23,9 @@
   "dependencies": {
     "history": "^4.7.2",
     "jsx-control-statements": "^3.2.6",
-    "prop-types": "^15.5.10",
-    "react": "16.0.0-rc.2",
-    "react-dom": "16.0.0-rc.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
     "redux-first-router": "^1.9.19",
@@ -42,17 +42,17 @@
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-plugin-transform-regenerator": "^6.26.0",
     "babel-preset-env": "^1.6.0",
-    "eslint": "^4.7.0",
+    "eslint": "^4.8.0",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.3.0",
+    "eslint-plugin-react": "^7.4.0",
     "html-webpack-plugin": "^2.30.1",
-    "jest": "^21.1.0",
+    "jest": "^21.2.1",
     "raw-loader": "^0.5.1",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "webpack": "^3.6.0",
     "webpack-dashboard": "^1.0.0-5",
-    "webpack-dev-server": "^2.8.2"
+    "webpack-dev-server": "^2.9.1"
   }
 }
